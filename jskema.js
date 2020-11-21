@@ -174,15 +174,15 @@ class Jskema {
   }
 }
 module.exports = {
-  _object: (object) => new Jskema().type("object").keep(Object.keys(object)).keys(object),
-  _string: () => new Jskema().type("string"),
-  _regex: (re) => new Jskema().type("string").regex(re),
-  _email: () => new Jskema().type("string").format("email"),
-  _number: () => new Jskema().type("number"),
-  _integer: () => new Jskema().type("number").format("integer"),
-  _range: (min, max) => new Jskema().type("number").range(min, max),
-  _date: () => new Jskema().type("string").format("date"),
-  _array: (type) =>
+  object: (object) => new Jskema().type("object").keep(Object.keys(object)).keys(object),
+  string: () => new Jskema().type("string"),
+  regex: (re) => new Jskema().type("string").regex(re),
+  email: () => new Jskema().type("string").format("email"),
+  number: () => new Jskema().type("number"),
+  integer: () => new Jskema().type("number").format("integer"),
+  range: (min, max) => new Jskema().type("number").range(min, max),
+  date: () => new Jskema().type("string").format("date"),
+  array: (type) =>
     type
       ? new Jskema()
           .type("object")
